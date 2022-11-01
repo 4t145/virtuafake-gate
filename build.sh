@@ -1,2 +1,2 @@
 cargo build --release
-cp /usr/bin ./target/release/virtuafake-gate 
+cp ./target/release/virtuafake-gate /usr/bin
