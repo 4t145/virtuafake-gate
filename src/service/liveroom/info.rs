@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use actix_web::{get, web, Result as AwResult, HttpResponse};
+use actix_web::{get, web, HttpResponse};
 use bilibili_client::reqwest_client::ReqwestClient as BiliClient;
 
 use crate::AddData;
@@ -17,8 +17,9 @@ pub struct LiveRoomResponse {
     is_streaming: bool
 }
 
-#[get("/proxy/liveroom/info")]
-pub async fn liveroom_info(data: web::Data<AddData>, req: web::Json<LiveRoomRequest>) -> HttpResponse {
+
+#[get("/liveroom/info")]
+pub async fn info(data: web::Data<AddData>, req: web::Form<LiveRoomRequest>) -> HttpResponse {
     let cache = &data.user_info_cache;
     let client = BiliClient::new();
     let resp = client.get_room_info_cached(req.uid, cache).await;

@@ -20,7 +20,7 @@ async fn main() -> std::io::Result<()> {
         App::new().app_data(app_data.clone())
         .wrap(middleware::DefaultHeaders::new().add(("Content-Type", "text/html; charset=utf-8")))
             .service(service::index_page)
-            .service(service::proxy::liveroom_info)
+            .service(service::liveroom::info)
     })
     .bind(("0.0.0.0", env!("PORT").parse::<u16>().unwrap_or(80)))?
     .run()

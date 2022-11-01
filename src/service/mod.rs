@@ -1,3 +1,3 @@
 mod index;
-pub mod proxy;
+pub mod liveroom;
 pub use index::index_page;
