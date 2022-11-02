@@ -10,10 +10,10 @@ pub struct LiveRoomRequest {
 }
 
 #[derive(Debug, PartialEq, Eq, Clone, Serialize, Default)]
-pub struct LiveRoomResponse {
-    title: String,
+pub struct LiveRoomResponse<'a> {
+    title: &'a str,
     watched: u32,
-    cover: String,
+    cover: &'a str,
     is_streaming: bool
 }
 
@@ -24,16 +24,17 @@ pub async fn info(data: web::Data<AddData>, req: web::Query<LiveRoomRequest>) ->
     let client = BiliClient::new();
     let resp = client.get_room_info_cached(req.uid, cache).await;
     if let Ok(resp) = resp {
-        if let Some(userinfo) = resp.data {
+        if let Some(userinfo) = &resp.data {
             let resp = LiveRoomResponse {
-                title: userinfo.live_room.title,
+                title: &userinfo.live_room.title,
                 watched: userinfo.live_room.watched_show.num as u32,
-                cover: userinfo.live_room.cover,
+                cover: &userinfo.live_room.cover,
                 is_streaming: userinfo.live_room.live_status == 1
             };
             return HttpResponse::Ok().json(resp) // <- send response
         }
-        return HttpResponse::NotFound().body(resp.message.unwrap_or_default())
+        let msg = resp.message.clone().unwrap_or_default();
+        return HttpResponse::NotFound().body(msg)
     } else {
         let err = resp.err().unwrap();
         HttpResponse::NotFound().body(format!("{err:?}"))

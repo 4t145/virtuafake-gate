@@ -1,0 +1,68 @@
+[[liver]]
+# uid
+uid = 59275
+# 备注，可能只是debug用
+remark = "梦魇tsuki"
+# 分组
+group = { tag="tsuki" }
+# 应援色
+color = "#9c7ace"
+
+#-------------------------------------------------- VRP
+[[liver]]
+uid = 421267475
+remark = "艾因"
+color="#A00000"
+group = { tag="project", gen=1 }
+
+[[liver]]
+uid = 434334701
+remark = "七海"
+color="#418BDE"
+group = { tag="project", gen=2 }
+
+[[liver]]
+uid = 434401868
+remark = "中单光一"
+color="#f0f0ff"
+group = { tag="project", gen=2 }
+
+[[liver]]
+uid = 472877684
+remark = "惑姬"
+group = { tag="project", gen=4 }
+
+[[liver]]
+uid = 477317922
+remark = "弥希"
+group = { tag="project", gen=5 }
+
+[[liver]]
+uid = 477342747
+remark = "星弥"
+group = { tag="project", gen=5 }
+
+[[liver]]
+uid = 477306079
+remark = "真绯瑠"
+group = { tag="project", gen=5 }
+
+
+
+[[liver]]
+uid = 666726799
+remark = "悠亚"
+group = { tag="project", gen=10 }
+
+#-------------------------------------------------- VRP
+
+
+#-------------------------------------------------- VR-LINK
+
+[[liver]]
+uid = 7706705
+remark = "阿梓"
+color="#b4b8fd"
+group = { tag="link" }
+
+#-------------------------------------------------- VR-LINK
