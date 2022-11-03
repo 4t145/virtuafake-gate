@@ -1,3 +1,4 @@
+use futures::future::join_all;
 use serde::Serialize;
 use actix_web::{get, web, HttpResponse};
 use bilibili_client::reqwest_client::ReqwestClient as BiliClient;
@@ -9,29 +10,40 @@ pub struct StreamingListResponse<'a>(Vec<&'a Liver>);
 
 #[get("/liver/streaming-list")]
 pub async fn streaming_list(data: web::Data<AddData>) -> HttpResponse {
-    let time_in = std::time::Instant::now();
-    let cache = &data.user_info_cache;
+    let cache = data.user_info_cache.clone();
     let feedlist = &data.feedlist;
-    let client = BiliClient::new();
     let mut response_list = Vec::new();
-    for liver in &feedlist.liver {
-        let resp = client.get_room_info_cached(liver.uid, cache).await;
-        let online = {
-            if let Ok(resp) = resp {
-                if let Some(userinfo) = &resp.data {
-                    userinfo.live_room.live_status == 1
+    let mut h_set = Vec::new();
+    for idx in 0..feedlist.liver.len() {
+        use actix_web::rt::*;
+        let uid = feedlist.liver[idx].uid;
+        let cache = cache.clone();
+        let h = spawn(async move {
+            let client = BiliClient::new();
+            let resp = client.get_room_info_cached(uid, &cache).await;
+            let online = {
+                if let Ok(resp) = resp {
+                    if let Some(userinfo) = &resp.data {
+                        userinfo.live_room.live_status == 1
+                    } else {
+                        false
+                    }
                 } else {
                     false
                 }
+            };
+            if online {
+                Some(idx)
             } else {
-                false
+                None
             }
-        };
-        if online {
-            response_list.push(liver)
+        });
+        h_set.push(h);
+    }
+    for idx in join_all(h_set).await {
+        if let Ok(Some(idx)) = idx {
+            response_list.push(&feedlist.liver[idx])
         }
     }
-    let time_out = std::time::Instant::now();
-    println!("用时{}s", (time_out-time_in).as_micros());
     return HttpResponse::Ok().json(response_list)
 }

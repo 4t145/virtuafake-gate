@@ -47,12 +47,81 @@ uid = 477306079
 remark = "真绯瑠"
 group = { tag="project", gen=5 }
 
+[[liver]]
+uid = 480680646
+remark = "阿萨"
+group = { tag="project", gen=6 }
+color = "#B8E994"
 
+[[liver]]
+uid = 480675481
+remark = "八木迪之"
+group = { tag="project", gen=6 }
+color = "#704214"
+
+[[liver]]
+uid = 480745939
+remark = "罗伊"
+group = { tag="project", gen=6 }
+color = "#FFEC89"
+
+[[liver]]
+uid = 474369808
+remark = "度人"
+group = { tag="project", gen=6 }
+
+
+[[liver]]
+uid = 56748733
+remark = "雪绘"
+group = { tag="project", gen=7 }
+
+
+[[liver]]
+uid = 370687588
+remark = "花留"
+group = { tag="project", gen=8 }
+
+
+[[liver]]
+uid = 370689210
+remark = "萨麦尔"
+group = { tag="project", gen=8 }
+
+[[liver]]
+uid = 628292881
+remark = "卡欧斯"
+group = { tag="project", gen=9 }
+color = "#BF0000"
+
+[[liver]]
+uid = 558070433
+remark = "千春"
+group = { tag="project", gen=9 }
+color = "#800000"
 
 [[liver]]
 uid = 666726799
 remark = "悠亚"
 group = { tag="project", gen=10 }
+
+[[liver]]
+uid = 666726800
+group = { tag="project", gen = 10}
+remark = "星宸"
+color = "#3755BD"
+
+[[liver]]
+uid = 666726801
+group = { tag="project", gen = 10}
+remark = "勺"
+color = "##707070"
+
+[[liver]]
+uid = 666726802
+group = { tag="project", gen = 10}
+remark = "瑞芙"
+
 
 #-------------------------------------------------- VRP
 

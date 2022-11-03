@@ -21,6 +21,6 @@ features = ["openssl"]
 version = "3.0.1"
 
 [dependencies.bilibili-client]
-# path = "../bilibili-client"
-branch = "dev"
-git = "https://github.com/4t145/bilibili-client"
+path = "../bilibili-client"
+# branch = "dev"
+# git = "https://github.com/4t145/bilibili-client"

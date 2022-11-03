@@ -11,6 +11,8 @@ pub struct LiveRoomRequest {
 
 #[derive(Debug, PartialEq, Eq, Clone, Serialize, Default)]
 pub struct LiveRoomResponse<'a> {
+    username: &'a str,
+    avatar: &'a str,
     title: &'a str,
     watched: u32,
     cover: &'a str,
@@ -26,6 +28,8 @@ pub async fn info(data: web::Data<AddData>, req: web::Query<LiveRoomRequest>) ->
     if let Ok(resp) = resp {
         if let Some(userinfo) = &resp.data {
             let resp = LiveRoomResponse {
+                avatar: &userinfo.face,
+                username: &userinfo.name,
                 title: &userinfo.live_room.title,
                 watched: userinfo.live_room.watched_show.num as u32,
                 cover: &userinfo.live_room.cover,

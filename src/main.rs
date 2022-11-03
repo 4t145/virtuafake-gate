@@ -1,4 +1,4 @@
-use std::sync::RwLock;
+use std::sync::{RwLock, Arc};
 use http_api_util::{cache::*, Api};
 use actix_web::{web, App, middleware, HttpServer};
 use bilibili_client::api::user::info::UserInfo;
@@ -11,7 +11,7 @@ mod model;
 mod config;
 // type LockedCache<A> = RwLock<FifoCache<<A as Api>::Request, MaybeExpired<<A as Api>::Response>>> ;
 pub struct AddData {
-    user_info_cache: FifoRwlCache<UserInfo>,
+    user_info_cache: Arc<FifoRwlCache<UserInfo>>,
     feedlist: config::feedlist::Feedlist
 }
 
@@ -19,7 +19,7 @@ pub struct AddData {
 async fn main() -> std::io::Result<()> {
     
     let app_data = web::Data::new(AddData {
-        user_info_cache: RwLock::new(FifoCache::new(128)),
+        user_info_cache: Arc::new(RwLock::new(FifoCache::new(128))),
         feedlist: config::feedlist::Feedlist::load_from_env()
     });
 
