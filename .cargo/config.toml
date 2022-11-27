@@ -2,3 +2,4 @@
 WEB_ROOT = "./web"
 PORT = "7777"
 FEEDLIST = "./config/feedlist.toml"
+MONGODB = "./config/mongodb.toml"
