@@ -1,6 +1,8 @@
 [[liver]]
 # uid
 uid = 59275
+# 房间号
+roomid = 851181
 # 备注，可能只是debug用
 remark = "梦魇tsuki"
 # 分组
@@ -11,114 +13,128 @@ color = "#9c7ace"
 #-------------------------------------------------- VRP
 [[liver]]
 uid = 421267475
+roomid = 21403601
 remark = "艾因"
 color="#A00000"
 group = { tag="project", gen=1 }
 
 [[liver]]
 uid = 434334701
+roomid = 21452505
 remark = "七海"
 color="#418BDE"
 group = { tag="project", gen=2 }
 
 [[liver]]
 uid = 434401868
+roomid = 21457197
 remark = "中单光一"
 color="#f0f0ff"
 group = { tag="project", gen=2 }
 
 [[liver]]
 uid = 472877684
+roomid = 21613356
 remark = "惑姬"
 group = { tag="project", gen=4 }
 
 [[liver]]
 uid = 477317922
+roomid = 21672023
 remark = "弥希"
 group = { tag="project", gen=5 }
 
 [[liver]]
 uid = 477342747
+roomid = 21672022
 remark = "星弥"
 group = { tag="project", gen=5 }
 
 [[liver]]
 uid = 477306079
+roomid = 21672024
 remark = "真绯瑠"
 group = { tag="project", gen=5 }
 
 [[liver]]
 uid = 480680646
+roomid = 21696950
 remark = "阿萨"
 group = { tag="project", gen=6 }
 color = "#B8E994"
 
 [[liver]]
 uid = 480675481
+roomid = 21696929
 remark = "八木迪之"
 group = { tag="project", gen=6 }
 color = "#704214"
 
 [[liver]]
 uid = 480745939
+roomid = 21696953
 remark = "罗伊"
 group = { tag="project", gen=6 }
 color = "#FFEC89"
 
 [[liver]]
 uid = 474369808
+roomid = 21696957
 remark = "度人"
 group = { tag="project", gen=6 }
 
 
 [[liver]]
 uid = 56748733
+roomid = 21756924
 remark = "雪绘"
 group = { tag="project", gen=7 }
 
 
 [[liver]]
 uid = 370687588
+roomid = 22111428
 remark = "花留"
 group = { tag="project", gen=8 }
 
 
 [[liver]]
-uid = 370689210
-remark = "萨麦尔"
-group = { tag="project", gen=8 }
-
-[[liver]]
 uid = 628292881
+roomid = 22389314
 remark = "卡欧斯"
 group = { tag="project", gen=9 }
 color = "#BF0000"
 
 [[liver]]
 uid = 558070433
+roomid = 22389323
 remark = "千春"
 group = { tag="project", gen=9 }
 color = "#800000"
 
 [[liver]]
 uid = 666726799
+roomid = 22470216
 remark = "悠亚"
 group = { tag="project", gen=10 }
 
 [[liver]]
 uid = 666726800
+roomid = 22470210
 group = { tag="project", gen = 10}
 remark = "星宸"
 color = "#3755BD"
 
 [[liver]]
 uid = 666726801
+roomid = 22470208
 group = { tag="project", gen = 10}
 remark = "勺"
 color = "##707070"
 
 [[liver]]
 uid = 666726802
+roomid = 22470204
 group = { tag="project", gen = 10}
 remark = "瑞芙"
 
@@ -130,6 +146,7 @@ remark = "瑞芙"
 
 [[liver]]
 uid = 7706705
+roomid = 510
 remark = "阿梓"
 color="#b4b8fd"
 group = { tag="link" }
