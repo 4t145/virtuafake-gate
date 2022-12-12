@@ -8,7 +8,10 @@ pub fn default_color() -> String {
 pub struct Liver {
     /// 备注
     pub remark: Option<String>,
+    /// 用户id
     pub uid: u64,
+    /// 房间id
+    pub roomid: u64,
     /// 分组
     pub group: Group,
     /// 应援色
