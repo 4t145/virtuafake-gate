@@ -19,7 +19,7 @@ pub struct LiveDanmakuRequest {
 }
 
 #[post("/liveroom/danmaku")]
-pub async fn danmaku(data: web::Data<AddData>, req: web::Json<LiveDanmakuRequest>) -> HttpResponse {
+pub async fn danmaku(data: web::Data<AddData>, mut req: web::Json<LiveDanmakuRequest>) -> HttpResponse {
     let collection_name = req.roomid.to_string();
     let collection = data.db.collection::<Event>(&collection_name);
     let mut filter = bson::doc! {
@@ -29,6 +29,7 @@ pub async fn danmaku(data: web::Data<AddData>, req: web::Json<LiveDanmakuRequest
             "$gte": req.time_from as i64,
             "$lt": req.time_to as i64,
         },
+        
     };
     if let Some(uid) = req.uid {
         filter.insert("data.user.uid", bson::Bson::Int64(uid as i64));
@@ -41,9 +42,11 @@ pub async fn danmaku(data: web::Data<AddData>, req: web::Json<LiveDanmakuRequest
             "$ne": 1
         });
     }
-    let options = req.pagination.clone().as_mongodb_option();
-    let mut collector = Vec::new();
     let total =  collection.count_documents(filter.clone(), None).await.unwrap();
+    req.pagination.total = total;
+    let pagination = &req.pagination;
+    let options = pagination.clone().as_mongodb_option(true);
+    let mut collector = Vec::new();
     match collection.find(filter, options).await {
         Ok(mut cursor) => {
             while let Ok(Some(record)) = cursor.try_next().await {
@@ -51,11 +54,7 @@ pub async fn danmaku(data: web::Data<AddData>, req: web::Json<LiveDanmakuRequest
             }
             return HttpResponse::Ok().json(Paged {
                 data: collector,
-                pagination: Pagination {
-                    total,
-                    size: req.pagination.size,
-                    page: req.pagination.page
-                }
+                pagination: pagination.clone(),
             });
         }
         Err(e) => {

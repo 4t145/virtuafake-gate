@@ -21,9 +21,14 @@ pub struct Pagination {
 }
 
 impl Pagination {
-    pub fn as_mongodb_option(self) -> mongodb::options::FindOptions {
+    pub fn as_mongodb_option(self, from_end: bool) -> mongodb::options::FindOptions {
+        let skip;
+        if from_end {
+            skip = Some((self.total.saturating_sub(self.size * (self.page + 1))) as u64);
+        } else {
+            skip = Some((self.size * self.page) as u64);
+        }
         let limit = Some(self.size as i64);
-        let skip = Some((self.size * self.page) as u64);
         mongodb::options::FindOptions::builder().limit(limit).skip(skip).build()
     }
 }

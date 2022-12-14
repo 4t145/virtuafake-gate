@@ -63,6 +63,7 @@ async fn main() -> std::io::Result<()> {
         .service(service::liveroom::danmaku)
         .service(service::liveroom::danmaku_heat)
         .service(service::liveroom::watched)
+        .service(service::liveroom::superchat)
         .service(service::liver::streaming_list)
         .service(service::liver::feedlist_liver)
     })
