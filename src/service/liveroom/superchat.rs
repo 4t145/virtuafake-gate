@@ -19,7 +19,7 @@ pub async fn superchat(data: web::Data<AddData>, mut req: web::Json<LiveSupercha
     let collection_name = req.roomid.to_string();
     let collection = data.db.collection::<Event>(&collection_name);
     let mut filter = bson::doc! {
-        "tag": "Danmaku",
+        "tag": "SuperChat",
         "timestamp": {
             "$exists": true,
             "$gte": req.time_from as i64,

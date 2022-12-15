@@ -1,7 +1,7 @@
 use std::sync::{RwLock, Arc};
 use config::EnvConfig;
 use http_api_util::{cache::*};
-use actix_web::{web, App, middleware, HttpServer};
+use actix_web::{web, App, HttpServer};
 use bilibili_client::api::user::info::UserInfo;
 use bilibili_client::reqwest_client::FifoRwlCache;
 use actix_cors::Cors;
@@ -64,6 +64,8 @@ async fn main() -> std::io::Result<()> {
         .service(service::liveroom::danmaku_heat)
         .service(service::liveroom::watched)
         .service(service::liveroom::superchat)
+        .service(service::liveroom::gift)
+        .service(service::liver::feedlist_liver)
         .service(service::liver::streaming_list)
         .service(service::liver::feedlist_liver)
     })
