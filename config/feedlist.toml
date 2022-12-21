@@ -6,7 +6,7 @@ roomid = 851181
 # 备注，可能只是debug用
 remark = "梦魇tsuki"
 # 分组
-group = { tag="tsuki" }
+group = { tag = "tsuki" }
 # 应援色
 color = "#9c7ace"
 
@@ -15,130 +15,294 @@ color = "#9c7ace"
 uid = 421267475
 roomid = 21403601
 remark = "艾因"
-color="#A00000"
-group = { tag="project", gen=1 }
+color = "#A00000"
+group = { tag = "project", gen = 1 }
 
 [[liver]]
 uid = 434334701
 roomid = 21452505
 remark = "七海"
-color="#418BDE"
-group = { tag="project", gen=2 }
+color = "#418BDE"
+group = { tag = "project", gen = 2 }
 
 [[liver]]
 uid = 434401868
 roomid = 21457197
 remark = "中单光一"
-color="#f0f0ff"
-group = { tag="project", gen=2 }
+color = "#f0f0ff"
+group = { tag = "project", gen = 2 }
 
 [[liver]]
 uid = 472877684
 roomid = 21613356
 remark = "惑姬"
-group = { tag="project", gen=4 }
+group = { tag = "project", gen = 4 }
 
 [[liver]]
 uid = 477317922
 roomid = 21672023
 remark = "弥希"
-group = { tag="project", gen=5 }
+group = { tag = "project", gen = 5 }
 
 [[liver]]
 uid = 477342747
 roomid = 21672022
 remark = "星弥"
-group = { tag="project", gen=5 }
+group = { tag = "project", gen = 5 }
 
 [[liver]]
 uid = 477306079
 roomid = 21672024
 remark = "真绯瑠"
-group = { tag="project", gen=5 }
+group = { tag = "project", gen = 5 }
 
 [[liver]]
 uid = 480680646
 roomid = 21696950
 remark = "阿萨"
-group = { tag="project", gen=6 }
+group = { tag = "project", gen = 6 }
 color = "#B8E994"
 
 [[liver]]
 uid = 480675481
 roomid = 21696929
 remark = "八木迪之"
-group = { tag="project", gen=6 }
+group = { tag = "project", gen = 6 }
 color = "#704214"
 
 [[liver]]
 uid = 480745939
 roomid = 21696953
 remark = "罗伊"
-group = { tag="project", gen=6 }
+group = { tag = "project", gen = 6 }
 color = "#FFEC89"
 
 [[liver]]
 uid = 474369808
 roomid = 21696957
 remark = "度人"
-group = { tag="project", gen=6 }
+group = { tag = "project", gen = 6 }
 
 
 [[liver]]
 uid = 56748733
 roomid = 21756924
 remark = "雪绘"
-group = { tag="project", gen=7 }
+group = { tag = "project", gen = 7 }
 
 
 [[liver]]
 uid = 370687588
 roomid = 22111428
 remark = "花留"
-group = { tag="project", gen=8 }
+group = { tag = "project", gen = 8 }
 
 
 [[liver]]
 uid = 628292881
 roomid = 22389314
 remark = "卡欧斯"
-group = { tag="project", gen=9 }
+group = { tag = "project", gen = 9 }
 color = "#BF0000"
 
 [[liver]]
 uid = 558070433
 roomid = 22389323
 remark = "千春"
-group = { tag="project", gen=9 }
+group = { tag = "project", gen = 9 }
 color = "#800000"
 
 [[liver]]
 uid = 666726799
 roomid = 22470216
 remark = "悠亚"
-group = { tag="project", gen=10 }
+group = { tag = "project", gen = 10 }
 
 [[liver]]
 uid = 666726800
 roomid = 22470210
-group = { tag="project", gen = 10}
+group = { tag = "project", gen = 10 }
 remark = "星宸"
 color = "#3755BD"
 
 [[liver]]
 uid = 666726801
 roomid = 22470208
-group = { tag="project", gen = 10}
+group = { tag = "project", gen = 10 }
 remark = "勺"
-color = "##707070"
+color = "#707070"
 
 [[liver]]
 uid = 666726802
 roomid = 22470204
-group = { tag="project", gen = 10}
+group = { tag = "project", gen = 10 }
 remark = "瑞芙"
 
+[[liver]]
+uid = 690608706
+roomid = 22605469
+group = { tag = "project", gen = 11 }
+remark = "田野柴"
 
+[[liver]]
+uid = 690608691
+roomid = 22605469
+group = { tag = "project", gen = 11 }
+remark = "田野柴"
+color = "#CC225F"
+
+[[liver]]
+uid = 690608686
+roomid = 22605463
+group = { tag = "project", gen = 11 }
+remark = "茉里"
+color = "#C70039"
+
+[[liver]]
+uid = 690608694
+roomid = 22605466
+group = { tag = "project", gen = 11 }
+remark = "伊深"
+color = "#CC777C"
+
+[[liver]]
+uid = 690608702
+roomid = 22778627
+group = { tag = "project", gen = 12 }
+remark = "九十九"
+color = "#C6B6EC"
+
+
+[[liver]]
+uid = 690608693
+roomid = 22778610
+group = { tag = "project", gen = 12 }
+remark = "勾檀"
+color = "#D6E568"
+
+[[liver]]
+uid = 690608687
+roomid = 22778596
+group = { tag = "project", gen = 12 }
+remark = "蕾米"
+color = "#77cfd4"
+
+[[liver]]
+uid = 690608704
+roomid = 23017349
+group = { tag = "project", gen = 13 }
+remark = "桃星"
+
+[[liver]]
+uid = 690608688
+roomid = 23017343
+group = { tag = "project", gen = 13 }
+remark = "吉吉"
+color = "#FBA33E"
+
+
+[[liver]]
+uid = 690608690
+roomid = 23260932
+group = { tag = "project", gen = 14 }
+remark = "恋诗夜"
+color = "#EE548E"
+
+[[liver]]
+uid = 690608698
+roomid = 23260993
+group = { tag = "project", gen = 14 }
+remark = "瑞娅"
+color = "#776ef2"
+
+[[liver]]
+uid = 690608689
+roomid = 23260856
+group = { tag = "project", gen = 14 }
+remark = "夜宫"
+
+[[liver]]
+uid = 690608695
+roomid = 23260979
+group = { tag = "project", gen = 14 }
+remark = "库伽"
+
+[[liver]]
+uid = 690608709
+roomid = 23550749
+group = { tag = "project", gen = 15 }
+remark = "尤格"
+color = "#6671BC"
+
+[[liver]]
+uid = 690608710
+roomid = 23550773
+group = { tag = "project", gen = 15 }
+remark = "暴食"
+color = "#6f1313"
+
+[[liver]]
+uid = 690608711
+roomid = 23550784
+group = { tag = "project", gen = 15 }
+remark = "克克"
+color = "#ff0329"
+
+[[liver]]
+uid = 690608712
+roomid = 23550793
+group = { tag = "project", gen = 15 }
+remark = "友夏"
+color = "#a72424"
+
+[[liver]]
+uid = 1405589619
+roomid = 23805059
+group = { tag = "project", gen = 16 }
+remark = "希维"
+color = "#91CAD1"
+
+[[liver]]
+uid = 1484169431
+roomid = 23805029
+group = { tag = "project", gen = 16 }
+remark = "雾深"
+color = "#1E377F"
+
+[[liver]]
+uid = 690608714
+roomid = 23805078
+group = { tag = "project", gen = 16 }
+remark = "狩砂"
+color = "#B4BBC4"
+
+[[liver]]
+uid = 1155425566
+roomid = 23805066
+group = { tag = "project", gen = 16 }
+remark = "希侑"
+color = "#FF91AE"
+
+[[liver]]
+uid = 1116072703
+roomid = 25788858
+group = { tag = "project", gen = 17 }
+remark = "莱恩"
+color = "#FFDB79"
+
+[[liver]]
+uid = 1739085910
+roomid = 25788830
+group = { tag = "project", gen = 17 }
+remark = "江乱"
+color = "#AE55E6"
+
+[[liver]]
+uid = 1954091502
+roomid = 25788785
+group = { tag = "project", gen = 17 }
+remark = "岁己"
+color = "#87EAFF"
 #-------------------------------------------------- VRP
 
 
@@ -148,7 +312,7 @@ remark = "瑞芙"
 uid = 7706705
 roomid = 510
 remark = "阿梓"
-color="#b4b8fd"
-group = { tag="link" }
+color = "#b4b8fd"
+group = { tag = "link" }
 
 #-------------------------------------------------- VR-LINK
