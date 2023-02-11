@@ -23,7 +23,7 @@ pub struct LiveRoomResponse<'a> {
 #[get("/liveroom/info")]
 pub async fn info(data: web::Data<AddData>, req: web::Query<LiveRoomRequest>) -> HttpResponse {
     let cache = &data.user_info_cache;
-    let client = BiliClient::new();
+    let client = BiliClient::new(Some(data.cookies.clone()));
     let resp = client.get_room_info_cached(req.uid, cache).await;
     if let Ok(resp) = resp {
         if let Some(userinfo) = &resp.data {

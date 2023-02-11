@@ -2,7 +2,7 @@ use serde::{Deserialize};
 
 pub mod feedlist;
 pub mod mongodb;
-
+pub mod cookie;
 pub trait EnvConfig: for <'de> Deserialize<'de> {
     const ENV: &'static str;
     fn load() -> Self where Self:Sized {

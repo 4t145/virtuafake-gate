@@ -14,12 +14,14 @@ pub async fn streaming_list(data: web::Data<AddData>) -> HttpResponse {
     let feedlist = &data.feedlist;
     let mut response_list = Vec::new();
     let mut h_set = Vec::new();
+    let cookies = Some(data.cookies.clone());
     for idx in 0..feedlist.liver.len() {
         use actix_web::rt::*;
         let uid = feedlist.liver[idx].uid;
         let cache = cache.clone();
+        let cookies = cookies.clone();
         let h = spawn(async move {
-            let client = BiliClient::new();
+            let client = BiliClient::new(cookies);
             let resp = client.get_room_info_cached(uid, &cache).await;
             let online = {
                 if let Ok(resp) = resp {

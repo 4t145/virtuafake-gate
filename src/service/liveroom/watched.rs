@@ -27,8 +27,8 @@ pub async fn watched(data: web::Data<AddData>, req: web::Json<LiveWatchedRequest
     match collection.find(filter, None).await {
         Ok(mut cursor) => {
             while let Ok(Some(record)) = cursor.try_next().await {
-                match record.event {
-                    bilive_danmaku::event::Event::WatchedUpdate { num } => {
+                match record.event.data {
+                    bilive_danmaku::event::EventData::WatchedUpdate { num } => {
                         collector.push(num as u32)
                     }
                     _ => {}

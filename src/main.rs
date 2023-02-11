@@ -1,9 +1,12 @@
 use std::sync::{RwLock, Arc};
 use config::EnvConfig;
+use config::cookie::CookieItem;
 use http_api_util::{cache::*};
 use actix_web::{web, App, HttpServer};
 use bilibili_client::api::user::info::UserInfo;
 use bilibili_client::reqwest_client::FifoRwlCache;
+use reqwest::Url;
+use reqwest::cookie::Jar;
 use actix_cors::Cors;
 
 mod service;
@@ -14,7 +17,8 @@ mod config;
 pub struct AddData {
     user_info_cache: Arc<FifoRwlCache<UserInfo>>,
     feedlist: config::feedlist::Feedlist,
-    db: mongodb::Database
+    db: mongodb::Database,
+    cookies: Arc<Jar>
 }
 
 #[actix_web::main]
@@ -34,10 +38,17 @@ async fn main() -> std::io::Result<()> {
         db
     };
 
+    let cookie_config = config::cookie::Config::load();
+    let cookies = Jar::default();
+    for c in cookie_config.cookies {
+        let CookieItem { url, value } = c;
+        cookies.add_cookie_str(&value, &url.parse::<Url>().unwrap());
+    }
     let app_data = web::Data::new(AddData {
         user_info_cache: Arc::new(RwLock::new(FifoCache::new(128))),
         feedlist: config::feedlist::Feedlist::load_from_env(),
-        db
+        db,
+        cookies: Arc::new(cookies)
     });
 
     HttpServer::new(move || {
