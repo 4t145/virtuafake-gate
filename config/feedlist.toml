@@ -4,7 +4,7 @@ uid = 59275
 # 房间号
 roomid = 851181
 # 备注，可能只是debug用
-remark = "梦魇tsuki"
+remark = "梦魇Tsuki"
 # 分组
 group = { tag = "tsuki" }
 # 应援色
@@ -15,8 +15,15 @@ color = "#9c7ace"
 uid = 421267475
 roomid = 21403601
 remark = "艾因"
+group = { tag = "project", gen = 1 }
+
+[[liver]]
+uid = 420249427
+roomid = 21403609
+remark = "琉绮"
 color = "#A00000"
 group = { tag = "project", gen = 1 }
+
 
 [[liver]]
 uid = 434334701
@@ -31,6 +38,30 @@ roomid = 21457197
 remark = "中单光一"
 color = "#f0f0ff"
 group = { tag = "project", gen = 2 }
+
+[[liver]]
+uid = 455916618
+roomid = 21571739
+remark = "无理"
+group = { tag = "project", gen = 3 }
+
+[[liver]]
+uid = 455965041
+roomid = 21669084
+remark = "羽音"
+group = { tag = "project", gen = 3 }
+
+[[liver]]
+uid = 472821519
+roomid = 21615277
+remark = "喵月"
+group = { tag = "project", gen = 4 }
+
+[[liver]]
+uid = 472845978
+roomid = 21613353
+remark = "有加"
+group = { tag = "project", gen = 4 }
 
 [[liver]]
 uid = 472877684
@@ -90,6 +121,17 @@ roomid = 21756924
 remark = "雪绘"
 group = { tag = "project", gen = 7 }
 
+[[liver]]
+uid = 490331391
+roomid = 21763344
+remark = "沙夜"
+group = { tag = "project", gen = 7 }
+
+[[liver]]
+uid = 319810877
+roomid = 21763337
+remark = "星也"
+group = { tag = "project", gen = 7 }
 
 [[liver]]
 uid = 370687588
@@ -99,11 +141,29 @@ group = { tag = "project", gen = 8 }
 
 
 [[liver]]
+uid = 370687372
+roomid = 22111414
+remark = "紫纪"
+group = { tag = "project", gen = 8 }
+
+[[liver]]
+uid = 370689210
+roomid = 22111450
+remark = "萨麦尔"
+group = { tag = "project", gen = 8 }
+
+[[liver]]
 uid = 628292881
 roomid = 22389314
 remark = "卡欧斯"
 group = { tag = "project", gen = 9 }
 color = "#BF0000"
+
+[[liver]]
+uid = 558070436
+roomid = 22389323
+remark = "清良"
+group = { tag = "project", gen = 9 }
 
 [[liver]]
 uid = 558070433
@@ -188,6 +248,12 @@ remark = "蕾米"
 color = "#77cfd4"
 
 [[liver]]
+uid = 690608701
+roomid = 22778617
+group = { tag = "project", gen = 12 }
+remark = "犬童"
+
+[[liver]]
 uid = 690608704
 roomid = 23017349
 group = { tag = "project", gen = 13 }
@@ -200,6 +266,11 @@ group = { tag = "project", gen = 13 }
 remark = "吉吉"
 color = "#FBA33E"
 
+[[liver]]
+uid = 690608696
+roomid = 23017346
+group = { tag = "project", gen = 13 }
+remark = "绮楼"
 
 [[liver]]
 uid = 690608690
@@ -226,6 +297,12 @@ uid = 690608695
 roomid = 23260979
 group = { tag = "project", gen = 14 }
 remark = "库伽"
+
+[[liver]]
+uid = 690608692
+roomid = 23260965
+group = { tag = "project", gen = 14 }
+remark = "未羽"
 
 [[liver]]
 uid = 690608709
@@ -303,6 +380,28 @@ roomid = 25788785
 group = { tag = "project", gen = 17 }
 remark = "岁己"
 color = "#87EAFF"
+
+
+[[liver]]
+uid = 1542516095
+roomid = 26966452
+group = { tag = "project", gen = 18 }
+remark = "伊舞"
+
+
+[[liver]]
+uid = 1827139579
+roomid = 25762103
+group = { tag = "project", gen = 18 }
+remark = "欧珀"
+
+
+[[liver]]
+uid = 1609526545
+roomid = 26966466
+group = { tag = "project", gen = 18 }
+remark = "栞栞"
+
 #-------------------------------------------------- VRP
 
 
@@ -315,4 +414,81 @@ remark = "阿梓"
 color = "#b4b8fd"
 group = { tag = "link" }
 
+[[liver]]
+uid = 14387072
+roomid = 605
+remark = "小可"
+group = { tag = "link" }
+
+[[liver]]
+uid = 1750561
+roomid = 8721033
+remark = "蜜球兔"
+group = { tag = "link" }
+
+[[liver]]
+uid = 392505232
+roomid = 21224291
+remark = "安堂いなり"
+group = { tag = "link" }
+
+[[liver]]
+uid = 98181
+roomid = 4418655
+remark = "菫妃奈"
+group = { tag = "link" }
+
+[[liver]]
+uid = 471308347
+roomid = 21664698
+remark = "寿寿歌"
+group = { tag = "link" }
+
+[[liver]]
+uid = 322210278
+roomid = 21736138
+remark = "魔魔マラ"
+group = { tag = "link" }
+
+[[liver]]
+uid = 741520
+roomid = 33942
+remark = "茶冷"
+group = { tag = "link" }
+
+[[liver]]
+uid = 666726803
+roomid = 22470189
+remark = "伊莎贝拉"
+group = { tag = "link" }
+
+[[liver]]
+uid = 6853766
+roomid = 3032130
+remark = "舒三妈"
+group = { tag = "link" }
+
+[[liver]]
+uid = 7706705
+roomid = 529249
+remark = "诺莺"
+group = { tag = "link" }
+
+[[liver]]
+uid = 176836079
+roomid = 6068126
+remark = "糯依"
+group = { tag = "link" }
+
+[[liver]]
+uid = 61639371
+roomid = 21484828
+remark = "轴伊"
+group = { tag = "link" }
+
+[[liver]]
+uid = 12485637
+roomid = 784734
+remark = "宫园凛"
+group = { tag = "link" }
 #-------------------------------------------------- VR-LINK
