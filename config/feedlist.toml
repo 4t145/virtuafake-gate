@@ -493,8 +493,41 @@ remark = "宫园凛"
 group = { tag = "link" }
 
 [[liver]]
-uid = 628292885
+uid = 36795838
 roomid = 22459139
 remark = "金克茜Jinxy"
+group = { tag = "link" }
+
+
+[[liver]]
+uid = 628292885
+roomid = 1573301
+remark = "KINGSK科科"
+group = { tag = "link" }
+
+
+[[liver]]
+uid = 628292885
+roomid = 22459139
+remark = "KINGSK科科"
+group = { tag = "link" }
+
+[[liver]]
+uid = 640156170
+roomid = 22425326
+remark = "素星"
+group = { tag = "link" }
+
+
+[[liver]]
+uid = 558070434
+roomid = 22459095
+remark = "鹤森"
+group = { tag = "link" }
+
+[[liver]]
+uid = 558070435
+roomid = 22459139
+remark = "笙妤"
 group = { tag = "link" }
 #-------------------------------------------------- VR-LINK
