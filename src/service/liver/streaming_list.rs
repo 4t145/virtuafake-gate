@@ -1,9 +1,9 @@
-use futures::future::join_all;
-use serde::Serialize;
 use actix_web::{get, web, HttpResponse};
 use bilibili_client::reqwest_client::ReqwestClient as BiliClient;
+use futures::future::join_all;
+use serde::Serialize;
 
-use crate::{AddData, model::liver::Liver};
+use crate::{model::liver::Liver, AddData};
 
 #[derive(Debug, Clone, Serialize, Default)]
 pub struct StreamingListResponse<'a>(Vec<&'a Liver>);
@@ -45,5 +45,5 @@ pub async fn streaming_list(data: web::Data<AddData>) -> HttpResponse {
             response_list.push(&feedlist.liver[idx])
         }
     }
-    return HttpResponse::Ok().json(response_list)
+    return HttpResponse::Ok().json(response_list);
 }

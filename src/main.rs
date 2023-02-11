@@ -65,9 +65,11 @@ async fn main() -> std::io::Result<()> {
         .service(service::liveroom::watched)
         .service(service::liveroom::superchat)
         .service(service::liveroom::gift)
+        .service(service::liveroom::enterroom)
         .service(service::liver::feedlist_liver)
         .service(service::liver::streaming_list)
         .service(service::liver::feedlist_liver)
+        .service(service::liver::user_info)
     })
     .bind(("0.0.0.0", env!("PORT").parse::<u16>().unwrap_or(80)))?
     .run()
