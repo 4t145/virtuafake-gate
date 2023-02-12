@@ -8,8 +8,7 @@ pub async fn user_info(data: web::Data<AddData>, uid: web::Path<(u64,)>) -> Http
     let cache = data.user_info_cache.clone();
     let uid = uid.0;
     let client = BiliClient::new(Some(data.cookies.clone()));
-    let resp = client.get_room_info_cached(uid, &cache).await;
-    
+    let resp = client.get_user_info_cached(uid, &cache).await;
     if let Ok(resp) = resp {
         if let Some(userinfo) = &resp.data {
             return HttpResponse::Ok().json(userinfo);
